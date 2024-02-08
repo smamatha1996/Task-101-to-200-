@@ -1,0 +1,5298 @@
+<html>
+    <head>
+        <title>XML Project</title>
+    </head>
+    <link href="style.css" rel="stylesheet">
+    <body>
+        <div class="data">
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1821</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of appnEN object in the following form:</p>
+            <ul>
+                <li>Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”</li>
+                <li>Example:
+“1.3.18.0.2.4.6=APPNNET;”
+“1.3.18.0.0.2032=NT81I056”</li>
+                <p><b>Using Object Class Fields</b></p>
+            </ul>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by the real objects
+of the appnEN object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <P><i>Table 45. Fields for appnEN Object Class</i></P>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+  <tr>
+    <td>AggregationParent</td>
+    <td>P</td>
+      <td>Zero or one *nnDomain object</td>
+    <td>Add</td>
+      <td>Opt</td>
+      <td>Null</td>
+  </tr>
+  <tr>
+    <td>AggregationPriorityValue</td>
+    <td>P</td>
+    <td>0–9 Priority value (zero through
+nine)
+-1 Suspended
+-2 Use a value from the DRT object.</td>
+      <td>Yes</td>
+      <td>Opt</td>
+      <td>-2</td>
+  </tr>
+  <tr>
+    <td>attachedCircuitList</td>
+    <td>T</td>
+    <td>Zero or more objects of the following
+classes:
+appnTransmissionGroupCircuit
+*ntriTypeAppnTgCircuit</td>
+      <td>No</td>
+      <td>—</td>
+      <td>Null</td>
+  </tr>
+                <tr>
+                    <td>attachedCircuitListCN</td>
+                    <td>T</td>
+                    <td>Zero or more objects of class
+*appnTransGroupCircuitCN</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+t5Node
+t4Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>32770 or 65535</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32770</td>
+                </tr>
+                <tr>
+                <td>ContainsLogical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <td>ContainsPhysical</td>
+                <td>P</td>
+                <td>SELFDEFINING containing the following
+values:
+“mySubordinates.logicalLink”
+“mySubordinates.port”</td>
+                <td>Add</td>
+                <td>Opt</td>
+                <td>Valid values</td>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnEN object.
+Specification: snaNetID.snaNodeName
+Example: 'APPNNET.NT81I056</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                    
+                    
+                </tr>
+</table>
+            <p><i>Table 45. Fields for appnEN Object Class (continued)</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>DisplayResourceOtherData  A</td>
+                    <td>P</td>
+                    <td>ny combination of the following
+separated by a comma:
+“Sysplex=sysplexInfo”</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceType    </td>
+                    <td>P </td>
+                    <td>DUIXC_RTN_APPN_EN</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus</td>
+                    <td>P</td>
+                    <td>See “DisplayStatus” on page 385 </td>
+                    <td>Yes</td>
+                    <td>Req </td>
+                    <td>132</td>
+                    
+                </tr>
+                <tr>
+                <td>ExceptionViewList    </td>
+                    <td>P</td>
+                    <td>Names of exception views</td>
+                    <td>Yes </td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>FLB_Creator     </td>
+                    <td>A</td>
+                    <td>Any printable named string</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_MonitoringLocalTopology
+  </td>
+                <td>A</td>
+                <td>One of the following values:
+                    0 (no)
+1 (ongoing)</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                    <td>A</td>
+                    <td>Internet Protocol address.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+ 
+                </td>
+                    <td>P</td>
+                    <td>Locate the name of the appnEN object.
+Specification: snaNodeName Example:
+'NT81I056'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>memberOf </td>
+                    <td>T </td>
+                    <td>One or more objects of the following
+classes:
+*nnDomain
+*enLocalTopology
+*nnLocalTopology</td>
+                    <td>No</td>
+                    <td> —</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>monitoringLuCollection A</td>
+                    <td>A</td>
+                    <td>Either:
+                        <ol><li> Set of LUs is not being
+monitored</li>
+<li> Set of LUs is in transition for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is complete for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is in transition for a
+timed monitor of the
+luCollection</li>
+<li> Set of LUs is complete for a
+timed monitor of the
+luCollection</li></ol>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.appnTrans- missionGroup
+ 
+ </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.CDRSC  Zero or more crossDomainResource objects
+  </td>
+                    <td>T</td>
+                    <td>Zero or more crossDomainResource objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                    <td>mySubordinates.logicalLink</td>
+                    <td>T</td>
+                    <td>Zero or more logicalLink objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.LU  </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+logicalUnit
+luGroup</td> 
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            
+            <p><i>Table 45. Fields for appnEN Object Class (continued)</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>mySubordinates.LUCDRSC2</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes: crossDomainResource
+logicalUnit</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.NonDGport   </td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>NO</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.port</td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                <td>mySubordinates.snaLocalTopo    </td>
+                    <td>T</td>
+                    <td>Zero or one *enLocalTopology object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>objectClass</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1821” (appnEN)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1821</td>
+                </tr>
+                <tr>
+                <td>opEquipmentList
+  </td>
+                <td>T</td>
+                <td>A list of hardware packaging elements</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null<td>
+                </tr>
+                <tr>
+                <td>packages</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1851” (appnENpkg)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1851</td>
+                </tr>
+                <tr>
+                <td>PreviousObjectIDs
+                </td>
+                    <td>A</td>
+                    <td>List of ObjectIDs</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>snaNodeName</td>
+                    <td>T</td>
+                    <td>The appnEN unqualified control point
+name (excludes netID)</td>
+                    <td>Ini</td>
+                    <td>opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td><ul>
+                        <li>administrativeState – X'01' (unlocked)</li>
+                        <li>availabilityStatus – X'00' (unlocked)</li>
+                        <li>operationalState – X'01' (enabled) Is active or pending
+inactive</li>
+                        <li>proceduralStatus – X'00' (empty set) Fully initialized</li>
+                        <li>unknownStatus – Either:
+X'00' End node status is known.
+X'01' End Node status is not
+known.</li>
+                        <li>usageState – X'01' (active) Is operational.</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>sysplexInfo</td>
+                    <td>T</td>
+                    <td>Name of a coupled system complex</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>ToposnaLucolMontime</td>
+                    <td>A</td>
+                    <td>-1 to n</td>
+                    <td>Yes</td>
+                    <td>Req</td>
+                    <td>-1</td>
+                </tr>
+                
+                    
+<!--
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                    <td>mySubordinates.logicalLink</td>
+                    <td>T</td>
+                    <td>Zero or more logicalLink objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.LU  </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+logicalUnit
+luGroup</td> 
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+-->
+            </table>
+            <h2>appnEN</h2>
+            <p>The class appnEN defines the fields that apply to objects of APPN end nodes.</p>
+            <p>An APPN network node is an SNA type 2.1 node that:</p><ul><li>Supports its end users.</li>
+            <li>Provides the following services to end nodes:
+            – Directory
+            – Management
+            – Route selection</li>
+            <li>Performs intermediate routing of data on sessions that traverse it.
+Like all type 2.1 nodes, an appnNN can also attach to a subarea network as a
+peripheral node.</li>
+            </ul>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1822</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of appnEN object in the following form:</p>
+            <ul>
+                <li>Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”</li>
+                <li>Example:
+“1.3.18.0.2.4.6=APPNNET;”
+“1.3.18.0.0.2032=NT81I056”</li>
+                <p><b>Using Object Class Fields</b></p>
+            </ul>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by the real objects
+of the appnEN object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 46. Fields for appnNN Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+  <tr>
+    <td>AggregationParent</td>
+    <td>P</td>
+      <td>Zero or one *nnDomain object</td>
+    <td>Add</td>
+      <td>Opt</td>
+      <td>Null</td>
+  </tr>
+  <tr>
+    <td>AggregationPriorityValue</td>
+    <td>P</td>
+    <td>0–9 Priority value (zero through
+nine)
+-1 Suspended
+-2 Use a value from the DRT object.</td>
+      <td>Yes</td>
+      <td>Opt</td>
+      <td>-2</td>
+  </tr>
+  <tr>
+    <td>attachedCircuitList</td>
+    <td>T</td>
+    <td>Zero or more objects of the following
+classes:
+appnTransmissionGroupCircuit
+*ntriTypeAppnTgCircuit</td>
+      <td>No</td>
+      <td>—</td>
+      <td>Null</td>
+  </tr>
+                <tr>
+                    <td>attachedCircuitListCN</td>
+                    <td>T</td>
+                    <td>Zero or more objects of class
+*appnTransGroupCircuitCN</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+t5Node
+t4Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>32770 or 65535</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32770</td>
+                </tr>
+                <tr>
+                <td>ContainsLogical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <td>ContainsPhysical</td>
+                <td>P</td>
+                <td>SELFDEFINING containing the following
+values:
+“mySubordinates.logicalLink”
+“mySubordinates.port”</td>
+                <td>Add</td>
+                <td>Opt</td>
+                <td>Valid values</td>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnEN object.
+Specification: snaNetID.snaNodeName
+Example: 'APPNNET.NT81I056</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                    
+                    
+                </tr>
+            </table>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>DisplayResourceOtherData  A</td>
+                    <td>P</td>
+                    <td>ny combination of the following
+separated by a comma:
+“Sysplex=sysplexInfo”</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceType    </td>
+                    <td>P </td>
+                    <td>DUIXC_RTN_APPN_EN</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus</td>
+                    <td>P</td>
+                    <td>See “DisplayStatus” on page 385 </td>
+                    <td>Yes</td>
+                    <td>Req </td>
+                    <td>132</td>
+                    
+                </tr>
+                <tr>
+                <td>ExceptionViewList    </td>
+                    <td>P</td>
+                    <td>Names of exception views</td>
+                    <td>Yes </td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>FLB_Creator     </td>
+                    <td>A</td>
+                    <td>Any printable named string</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_MonitoringLocalTopology
+  </td>
+                <td>A</td>
+                <td>One of the following values:
+                    0 (no)
+1 (ongoing)</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                    <td>A</td>
+                    <td>Internet Protocol address.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+ 
+                </td>
+                    <td>P</td>
+                    <td>Locate the name of the appnEN object.
+Specification: snaNodeName Example:
+'NT81I056'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>memberOf </td>
+                    <td>T </td>
+                    <td>One or more objects of the following
+classes:
+*nnDomain
+*enLocalTopology
+*nnLocalTopology</td>
+                    <td>No</td>
+                    <td> —</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>monitoringLuCollection A</td>
+                    <td>A</td>
+                    <td>Either:
+                        <ol><li> Set of LUs is not being
+monitored</li>
+<li> Set of LUs is in transition for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is complete for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is in transition for a
+timed monitor of the
+luCollection</li>
+<li> Set of LUs is complete for a
+timed monitor of the
+luCollection</li></ol>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.appnTrans- missionGroup
+ 
+ </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.CDRSC  Zero or more crossDomainResource objects
+  </td>
+                    <td>T</td>
+                    <td>Zero or more crossDomainResource objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                    <td>mySubordinates.logicalLink</td>
+                    <td>T</td>
+                    <td>Zero or more logicalLink objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.LU  </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+logicalUnit
+luGroup</td> 
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            
+            <p>Table 45. Fields for appnEN Object Class (continued)</p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>mySubordinates.LUCDRSC2</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes: crossDomainResource
+logicalUnit</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.NonDGport   </td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>NO</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.port</td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                <td>mySubordinates.snaLocalTopo    </td>
+                    <td>T</td>
+                    <td>Zero or one *enLocalTopology object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>objectClass</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1821” (appnEN)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1821</td>
+                </tr>
+                <tr>
+                <td>opEquipmentList
+  </td>
+                <td>T</td>
+                <td>A list of hardware packaging elements</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null<td>
+                </tr>
+                <tr>
+                <td>packages</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1851” (appnENpkg)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1851</td>
+                </tr>
+                <tr>
+                <td>PreviousObjectIDs
+                </td>
+                    <td>A</td>
+                    <td>List of ObjectIDs</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>snaNodeName</td>
+                    <td>T</td>
+                    <td>The appnEN unqualified control point
+name (excludes netID)</td>
+                    <td>Ini</td>
+                    <td>opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td><ul>
+                        <li>administrativeState – X'01' (unlocked)</li>
+                        <li>availabilityStatus – X'00' (unlocked)</li>
+                        <li>operationalState – X'01' (enabled) Is active or pending
+inactive</li>
+                        <li>proceduralStatus – X'00' (empty set) Fully initialized</li>
+                        <li>unknownStatus – Either:
+X'00' End node status is known.
+X'01' End Node status is not
+known.</li>
+                        <li>usageState – X'01' (active) Is operational.</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>sysplexInfo</td>
+                    <td>T</td>
+                    <td>Name of a coupled system complex</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>ToposnaLucolMontime</td>
+                    <td>A</td>
+                    <td>-1 to n</td>
+                    <td>Yes</td>
+                    <td>Req</td>
+                    <td>-1</td>
+                </tr>
+            </table>
+            <h2>appnTransmissionGroup</h2>
+            <p>The class appnTransmissionGroup defines the fields that apply to objects of APPN
+transmission groups. An APPN transmission group provides a route for a session
+stage between two logically adjacent nodes. The nodes can be any type 2.1 nodes,
+including:</p>
+            <ul>
+            <li>APPN network nodes</li>
+                <li>APPN end nodes</li>
+                <li>APPN branch network nodes</li>
+                <li>Interchange nodes</li>
+                <li>LEN nodes</li>
+                <li>Migration Data Host nodes</li>
+            </ul>
+            <p>Each APPN transmission group between two nodes is uniquely identified by a
+number, called the transmission group number. Using a series of transmission
+group numbers and names of associated adjacent nodes, a route is calculated and
+established for a session across an APPN network.</p>
+            <p>For the purposes of route calculations, a transmission group's state is either
+operational or not operational. The transmission group's state is unidirectional as
+seen from each of the two adjacent nodes. A transmission group must be
+operational in both directions to be eligible for route calculation.</p>
+            <p>The logical link to be used for the transmission group can be active or inactive for
+an operational transmission group. During the establishment of the route, inactive
+logical links are automatically activated on demand. When all the sessions using
+the transmission group are ended, the logical link is automatically deactivated
+when it uses a limited resource like a dial-up port, but the transmission group
+remains operational.</p>
+            <p>An APPN transmission group also provides the association between a real type 2.1
+node and a virtual routing node. The virtual routing node is not a real node.
+Instead, it is used to name a connection network. APPN route selection uses the
+transmission group from each of two real nodes to the virtual routing node to
+establish a direct-link connection between the two nodes.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1821</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of appnEN object in the following form:</p>
+            <ul>
+                <li>Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”               “1.3.18.0.0.2044=transmissionGroupId”</li>
+                <li>Alternate Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”               “1.3.18.0.0.2044=transmissionGroupId”</li>
+                <li>Example:
+“1.3.18.0.2.4.6=APPNNET;”
+“1.3.18.0.0.2032=NT81I056”
+ “1.3.18.0.0.2044=21.APPNNET.NT81I071”</li>
+                <p><b>Using Object Class Fields</b></p>
+            </ul>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by the real objects
+of the appnEN object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p>Table 47. Fields for appnTransmissionGroup Object Class</p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>appnTGcapabilities     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One byte from SNA control vector</td>
+                    
+                    <td>Init</td>
+                    
+                    <td>Opt</td>
+                    
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>brNNTgLocalLinkType  </td>
+                    <td>A</td>
+                    <td>Either:<br>
+0 Not reported<br>
+1 The branch link type is neither a branch
+uplink nor a branch downlink<br>
+2 The transmission group is a branch
+uplink<br>
+3 The transmission group is a branch
+downlink to an end node<br>
+4 The transmission group is a branch
+downlink to a cascaded branch network
+node<br>
+255 The agent cannot determine the branch
+link type<br>
+ </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:   
+                    <ul>
+                        <li>32771 if logically attached to a VTAM node</li>
+                        <li>32768 if the node is not a VTAM node or it is
+unknown</li>
+                        </ul></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsLogical</td>
+                    <td>A</td>
+                    <td>SELFDEFINING containing the following values:
+“2.9.3.5.7.14” (underlyingConnectionNames)
+“mySuperior”</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for example:
+LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionStatus</td>
+                    <td>T</td>
+                    <td>Either:<br>
+                    0 Not reported<br>
+1 CP-CP sessions are supported<br>
+2 CP-CP sessions are supported and the
+sender's contention-winner CP-CP
+session is active<br>
+3 CP-CP sessions are not supported and
+the sender's contention-winner CP-CP
+session is not active<br>
+4 CP-CP sessions are supported but the
+sender's contention-winner CP-CP
+session is not active</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionSupport</td>
+                    <td>T</td>
+                    <td>Either:<br>
+0 CP-CP sessions are not supported<br>
+1 CP-CP sessions are supported</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>deleteIndicator</td>
+                    <td>A</td>
+                    <td>Enumerated value for delete processing</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnTransmissionGroup
+object. Specification:
+(snaNetID.snaNodeName.tgn
+[.adj_snaNetID].adj_snaNodeName)
+(snaNetID.virtualRoutingNodeName.
+[.adj_snaNetID].adj_snaNodeName) or (snaNetID.snaNodeName.tgn
+[.adj_snaNetID].
+adj_virtualRoutingNodeName)
+Where .adj_snaNetID must be omitted if its value
+is the same as snaNetID Examples:
+'APPNNETB.NT81I056.21.APPNNETA.
+NT81I071' or 'APPNNET.VIRTUAL.21.
+NT81I071'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:
+“CP-CP Session Support”
+“Demand-Activated Underlying Link”
+“Intersubnetwork Routing Support”
+“Access to Virtual Routing Node”
+“Virtual-Route-Based TG”
+“HPR Support”
+“Branch capable”
+“Other”
+“Branch Uplink”
+“Branch Downlink”
+“Cascaded Branch”
+“Unknown”
+“Multilink”
+“CPCP-supportedUnknownStatus”
+“CPCP-supportedActive”
+“CPCP-notSupported”
+“CPCP-supportedNotActive”
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_DemandActivatedLinkState</td>
+                <td>A </td>
+                    <td><br>
+0 (unknown)<br>
+1 (demand-activated and inactive)</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>0</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+            </table>   
+           <h2>appnTransmissionGroupCircuit</h2>
+            <p>The class appnTransmissionGroupCircuit defines the fields that apply to objects of
+APPN transmission group circuits.</p>
+            <p>The appnTransmissionGroupCircuit object consists of one or two underlying
+appnTransmissionGroup objects, and provides a composite status of the
+appnTransmissionGroup objects. The status of an appnTransmissionGroupCircuit
+object is aggregated upward to an:</p>
+            <ul><li>*nnDomain object when the appnTransmissionGroupCircuit object supports
+CP-CP sessions and is a connection between a network node and a served end
+node</li>
+            <li>*interdomainCircuit object when the appnTransmissionGroupCircuit object: – Supports CP-CP sessions and is a connection between two network nodes, or – Is a connection between a network node and a virtual routing node.
+An appnTransmissionGroupCircuit object that does not support CP-CP sessions
+and is not a connection between a network node and a virtual routing node does
+not aggregate status upward.</li></ul>
+            <p><b>RODM Class Name
+1.3.18.0.0.2058</b></p>
+            <p>1.3.18.0.0.2058</p>
+            <p>MyName Field</p>
+            <p>Object name of appnTransmissionGroupCircuit object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2082=tgCircuitId”</li>
+            <li>Example:<br><br>
+“1.3.18.0.2.4.6=APPNNETA.APPNNETZ;”<br>
+“1.3.18.0.0.2082=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+“1.3.18.0.2.4.6=APPNNET;”<br>
+“1.3.18.0.0.2082=NT81I046.22.NT81I056”</li>
+            </ul>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+appnTransmissionGroupCircuit object class. It includes the valid field value, the
+default value, the initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 48. Fields for appnTransmissionGroupCircuit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance</td>
+                    <td>T</td>
+                    <td>One object of the following classes:
+appnBrNN
+appnEN
+appnNN
+interchangeNode
+lenNode
+logicalLink (when Composite Node
+using NTRI-class)
+migrationDataHost
+t2-1Node
+t4Node
+t5Node
+virtualRoutingNode
+virtualRoutingNode</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>aDetails    </td>
+                    <td>P </td>
+                    <td>DUIXC_RTN_APPN_EN</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>See “DisplayStatus” on page 385 </td>
+                    <td>Yes</td>
+                    <td>Req </td>
+                    <td>132</td>
+                    
+                </tr>
+                <tr>
+                <td>AggregationPriorityValue  </td>
+                    <td>P</td>
+                    <td>Names of exception views</td>
+                    <td>Yes </td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>A</td>
+                    <td>Any printable named string</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>FLB</td>
+                </tr>
+                <tr>
+                <td>CommandIndicator
+  </td>
+                <td>A</td>
+                <td>One of the following values:
+                    0 (no)
+1 (ongoing)</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                <td>ContainsPhysical</td>
+                    <td>A</td>
+                    <td>Internet Protocol address.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>Correlater  
+ 
+                </td>
+                    <td>P</td>
+                    <td>Locate the name of the appnEN object.
+Specification: snaNodeName Example:
+'NT81I056'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>DisplayResourceName</td>
+                    <td>T </td>
+                    <td>One or more objects of the following
+classes:
+*nnDomain
+*enLocalTopology
+*nnLocalTopology</td>
+                    <td>No</td>
+                    <td> —</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceType</td>
+                    <td>A</td>
+                    <td>Either:
+                        <ol><li> Set of LUs is not being
+monitored</li>
+<li> Set of LUs is in transition for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is complete for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is in transition for a
+timed monitor of the
+luCollection</li>
+<li> Set of LUs is complete for a
+timed monitor of the
+luCollection</li></ol>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>DisplayStatus</td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>ExceptionViewList
+  </td>
+                    <td>T</td>
+                    <td>Zero or more crossDomainResource objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>FLB_Creator</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>FLB_DemandActivatedLinkState</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                    <td>LocateName</td>
+                    <td>T</td>
+                    <td>Zero or more logicalLink objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>memberArcsOf </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+logicalUnit
+luGroup</td> 
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <p><b>Note:</b></p>
+            <ol>
+            <li>Only one of the a-TPInstance or z-TPInstance fields can contain an object of virtualRoutingNode.</li>
+                <li>At least one of the aDetails or zDetails fields must contain an object.</li>
+            </ol>
+            <h2>appnTransmissionGroupCircuit as appnTransGroupCircuitCN
+(*appnTransGroupCircuitCN)</h2>
+            <p>The class appnTransmissionGroupCircuit as appnTransGroupCircuitCN is used to
+represent an APPN connection to a composite node (interchangeNode) or a t5Node
+that traverses the subarea part of the network.</p>
+            <p>An *appnTransGroupCircuitCN class object represents an
+appnTransmissionGroupCircuit that is connected to either a composite node or a
+t5Node. The underlying resources of the *appnTransGroupCircuitCN object will
+show the appnTransmissionGroupCircuit and all possible subarea connections to
+the composite node (interchangeNode) or t5Node.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1821</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of appnEN object in the following form:</p>
+            <ul>
+                <li>Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”               “1.3.18.0.0.2044=transmissionGroupId”</li>
+                <li>Alternate Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”               “1.3.18.0.0.2044=transmissionGroupId”</li>
+                <li>Example:
+“1.3.18.0.2.4.6=APPNNET;”
+“1.3.18.0.0.2032=NT81I056”
+ “1.3.18.0.0.2044=21.APPNNET.NT81I071”</li>
+                <p><b>Note:Note use of DRN_prefix CN: in circuitID. It is used to distinguish roles.
+(CN: for *appnTransGroupCircuitCN)</b></p>
+                <p><b>Using Object Class Fields</b></p>
+            </ul>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by the real objects
+of the appnEN object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 49. Fields for appnTransmissionGroupCircuit as appnTransGroupCircuitCN Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>appnTGcapabilities     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One byte from SNA control vector</td>
+                    
+                    <td>Init</td>
+                    
+                    <td>Opt</td>
+                    
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>brNNTgLocalLinkType  </td>
+                    <td>A</td>
+                    <td>Either:<br>
+0 Not reported<br>
+1 The branch link type is neither a branch
+uplink nor a branch downlink<br>
+2 The transmission group is a branch
+uplink<br>
+3 The transmission group is a branch
+downlink to an end node<br>
+4 The transmission group is a branch
+downlink to a cascaded branch network
+node<br>
+255 The agent cannot determine the branch
+link type<br>
+ </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:   
+                    <ul>
+                        <li>32771 if logically attached to a VTAM node</li>
+                        <li>32768 if the node is not a VTAM node or it is
+unknown</li>
+                        </ul></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsLogical</td>
+                    <td>A</td>
+                    <td>SELFDEFINING containing the following values:
+“2.9.3.5.7.14” (underlyingConnectionNames)
+“mySuperior”</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for example:
+LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionStatus</td>
+                    <td>T</td>
+                    <td>Either:<br>
+                    0 Not reported<br>
+1 CP-CP sessions are supported<br>
+2 CP-CP sessions are supported and the
+sender's contention-winner CP-CP
+session is active<br>
+3 CP-CP sessions are not supported and
+the sender's contention-winner CP-CP
+session is not active<br>
+4 CP-CP sessions are supported but the
+sender's contention-winner CP-CP
+session is not active</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionSupport</td>
+                    <td>T</td>
+                    <td>Either:<br>
+0 CP-CP sessions are not supported<br>
+1 CP-CP sessions are supported</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>deleteIndicator</td>
+                    <td>A</td>
+                    <td>Enumerated value for delete processing</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnTransmissionGroup
+object. Specification:
+(snaNetID.snaNodeName.tgn
+[.adj_snaNetID].adj_snaNodeName)
+(snaNetID.virtualRoutingNodeName.
+[.adj_snaNetID].adj_snaNodeName) or (snaNetID.snaNodeName.tgn
+[.adj_snaNetID].
+adj_virtualRoutingNodeName)
+Where .adj_snaNetID must be omitted if its value
+is the same as snaNetID Examples:
+'APPNNETB.NT81I056.21.APPNNETA.
+NT81I071' or 'APPNNET.VIRTUAL.21.
+NT81I071'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:
+“CP-CP Session Support”
+“Demand-Activated Underlying Link”
+“Intersubnetwork Routing Support”
+“Access to Virtual Routing Node”
+“Virtual-Route-Based TG”
+“HPR Support”
+“Branch capable”
+“Other”
+“Branch Uplink”
+“Branch Downlink”
+“Cascaded Branch”
+“Unknown”
+“Multilink”
+“CPCP-supportedUnknownStatus”
+“CPCP-supportedActive”
+“CPCP-notSupported”
+“CPCP-supportedNotActive”
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_DemandActivatedLinkState</td>
+                <td>A </td>
+                    <td><br>
+0 (unknown)<br>
+1 (demand-activated and inactive)</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>0</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+            </table>   
+           <h2>appnTransmissionGroupCircuit</h2>
+            <p>The class appnTransmissionGroupCircuit as ntriTypeAppnTgCircuit is used to
+represent a NTRI-like APPN connection.</p>
+            <p>The *ntriTypeAppnTgCircuit represents an appnTransmissionGroupCircuit that is
+connected to a node with the following NTRI-like resources:</p>
+            <ul><li>NTRI</li>
+            <li>FrameRelay</li></ul>
+            <p><b>RODM Class Name
+1.3.18.0.0.2058</b></p>
+            <p>ESCON</p>
+            <p>Ethernet</p>
+            <p>The user can select the *ntriTypeAppnTgCircuit object and run the More Detail
+command to display a view that shows the NTRI-like resources and the t4Node
+that they reside on, the appnTransmissionGroupCircuit, and the node on the other
+side of the appnTransmissionGroupCircuit.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2058</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of ntriTypeAppnCircuit object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2082=tgCircuitId”</li>
+            <li>Example:<br><br>
+“1.3.18.0.2.4.6=APPNNETA.APPNNETZ;”<br>
+“1.3.18.0.0.2082=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+“1.3.18.0.2.4.6=APPNNET;”<br>
+“1.3.18.0.0.2082=NT81I046.22.NT81I056”</li>
+            </ul>
+            <p><b>Note: </b>Note use of DRN_prefix NT: in tgCircuitID. It is used to distinguish
+roles. (NT: for *ntriTypeAppnTgCircuit)</p>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+appnTransmissionGroupCircuit object class. It includes the valid field value, the
+default value, the initialization rules, and the modification rules for each field.</p>
+            <p>Table 50. Fields for appnTransmissionGroupCircuit as ntriTypeAppnTgCircuit Object Class</p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One object of the following classes:<br>
+appnBrNN<br>
+appnEN<br>
+appnNN<br>
+interchangeNode<br>
+lenNode<br>
+logicalLink (when Composite Node<br>
+using NTRI-class)<br>
+migrationDataHost<br>
+t2-1Node<br>
+t4Node<br>
+t5Node<br>
+virtualRoutingNode<br>
+virtualRoutingNode</td>
+                    
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>aDetails  </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationPriorityValue</td>
+                    <td>P</td>
+                    <td>0–9 Priority value (zero through
+nine)<br>
+-1 Suspended<br>
+-2 Use a value from the DRT object.<br></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more of the following object
+classes:<br>
+interchangeNode<br>
+migrationDataHost<br>
+*t4NodeGateway<br>
+t4Node<br>
+t5Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:<br>
+                        <ul>
+                        <li>32768 if at least one of the underlying
+appnTransmissionGroup objects is
+logically attached to a non-VTAM node
+or the node is unknown.</li>
+                        <li>32771 for all others</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsPhysical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“1.3.18.0.0.2178” (aDetails)<br><br>
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+appnTransmissionGroupCircuit object.
+Specification: (drn_prefix) concatenated
+with<br>
+(a_snaNetID.a_snaNodeName.
+tgn[.z_snaNetID].z_snaNodeName)
+Where .z_snaNetID must be omitted when
+its value is the same as a_snaNetID. Examples:<br>
+'C:APPNNET.NT81I046.22.NT81I056'
+'C:APPNNETA.NT81I046.21.APPNNETZ.
+NT81I061'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:<br>
+“CP-CP Session Support”<br>
+“Demand-Activated Underlying Link”<br>
+“Intersubnetwork Routing Support”<br>
+“Access to Virtual Routing Node”<br>
+“Virtual-Route-Based TG”<br>
+“HPR Support”<br>
+“Branch capable”<br>
+“Other”<br>
+“Branch Uplink”<br>
+“Branch Downlink”<br>
+“Cascaded Branch”<br>
+“Unknown”<br>
+“Multilink”<br>
+“CPCP-supportedUnknownStatus”<br>
+“CPCP-supportedActive”<br>
+“CPCP-notSupported”<br>
+“CPCP-supportedNotActive”<br>
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_DemandActivatedLinkState</td>
+                <td>A </td>
+                    <td><br>
+0 (unknown)<br>
+1 (demand-activated and inactive)</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>0</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td>
+                    <ul>
+                         <li>administrativeState<br> – X'01' (unlocked)</li>
+                         <li>availabilityStatus <br>– X'00' (empty set) The resource is<br>
+available for use.</li>
+                         <li>operationalState<br> – Either:<br>
+X'00' (disabled) TG circuit is not
+operational.<br>
+X'01' (enabled) TG circuit is
+operational.</li>
+                         <li>proceduralStatus <br>– One of the following:<br>
+X'00' (empty set) TG is fully
+initialized.<br>
+X'08' (terminating) TG is
+quiescing.</li>
+                         <li>unknownStatus<br> – Either:<br>
+X'00' TG status is known.<br>
+X'01' TG status is not known.</li>
+                         <li>usageState <br>– Either:<br>
+X'00' (idle) TG circuit is not
+operational.<br>
+X'01' (active) TG circuit is
+operational.</li>
+                        </ul></td>
+                    <td>Yes  </td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>tgCircuitId</td>
+                    <td>T</td>
+                    <td>The appnTransmissionGroupCircuit<br>
+identifier<br>
+(a_snaNodeName.tgn.z_snaNodeName)</td>
+                    <td>Init</td>
+                    <td>Req</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>z-TPInstance</td>
+                    <td>T</td>
+                    <td>One object of the following classes:<br>
+appnBrNN<br>
+appnEN<br>
+appnNN<br>
+interchangeNode<br>
+lenNode<br>
+logicalLink (when Composite Node<br>
+using NTRI-class)<br>
+migrationDataHost<br>
+t2-1Node<br>
+t4Node<br>
+t5Node<br>
+virtualRoutingNode</td>
+                    <td>No</td>
+                    <td> — </td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>zDetails</td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <p><b>Note:</b></p>
+            <ol>
+                <li>Only one of the a-TPInstance or z-TPInstance fields can contain an object of virtualRoutingNode.</li>
+                <li>At least one of the aDetails or zDetails fields must contain an object.</li>
+            </ol>
+            <h2>appnTransmissionGroupCircuit as appnTransGroupCircuitCN
+(*appnTransGroupCircuitCN)</h2>
+            <p>The class appnTransmissionGroupCircuit as appnTransGroupCircuitCN is used to
+represent an APPN connection to a composite node (interchangeNode) or a t5Node
+that traverses the subarea part of the network.</p>
+            <p>An *appnTransGroupCircuitCN class object represents an
+appnTransmissionGroupCircuit that is connected to either a composite node or a
+t5Node. The underlying resources of the *appnTransGroupCircuitCN object will
+show the appnTransmissionGroupCircuit and all possible subarea connections to
+the composite node (interchangeNode) or t5Node.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2058</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of *appnTransGroupCircuitCN object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=CN:snaNetID;”<br>
+“1.3.18.0.0.2082=tgCircuitId”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=CN:APPNNETA.APPNNETZ;”<br>
+“1.3.18.0.0.2082=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+                “1.3.18.0.2.4.6=CN:APPNNET;”<br>
+“1.3.18.0.0.2082=NT81I046.22.NT81I056”</li>
+            </ul>
+            <p><b>Note:</b> Note use of DRN_prefix CN: in circuitID. It is used to distinguish roles.
+(CN: for *appnTransGroupCircuitCN)</p>
+            <p><b>Using Object Class Fields</b></p>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+appnTransmissionGroupCircuit as appnTransGroupCircuitCN
+(*appnTransGroupCircuitCN) object class. It includes the valid field value, the
+default value, the initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 49. Fields for appnTransmissionGroupCircuit as appnTransGroupCircuitCN Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One object of the following classes:<br>
+appnBrNN<br>
+appnEN<br>
+appnNN<br>
+interchangeNode<br>
+lenNode<br>
+logicalLink (when Composite Node<br>
+using NTRI-class)<br>
+migrationDataHost<br>
+t2-1Node<br>
+t4Node<br>
+t5Node<br>
+virtualRoutingNode<br>
+virtualRoutingNode</td>
+                    
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>aDetails  </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationPriorityValue</td>
+                    <td>P</td>
+                    <td>0–9 Priority value (zero through
+nine)<br>
+-1 Suspended<br>
+-2 Use a value from the DRT object.<br></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more of the following object
+classes:<br>
+interchangeNode<br>
+migrationDataHost<br>
+*t4NodeGateway<br>
+t4Node<br>
+t5Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:<br>
+                        <ul>
+                        <li>32768 if at least one of the underlying
+appnTransmissionGroup objects is
+logically attached to a non-VTAM node
+or the node is unknown.</li>
+                        <li>32771 for all others</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsPhysical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“1.3.18.0.0.2178” (aDetails)<br><br>
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+appnTransmissionGroupCircuit object.
+Specification: (drn_prefix) concatenated
+with<br>
+(a_snaNetID.a_snaNodeName.
+tgn[.z_snaNetID].z_snaNodeName)
+Where .z_snaNetID must be omitted when
+its value is the same as a_snaNetID. Examples:<br>
+'C:APPNNET.NT81I046.22.NT81I056'
+'C:APPNNETA.NT81I046.21.APPNNETZ.
+NT81I061'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:<br>
+“CP-CP Session Support”<br>
+“Demand-Activated Underlying Link”<br>
+“Intersubnetwork Routing Support”<br>
+“Access to Virtual Routing Node”<br>
+“Virtual-Route-Based TG”<br>
+“HPR Support”<br>
+“Branch capable”<br>
+“Other”<br>
+“Branch Uplink”<br>
+“Branch Downlink”<br>
+“Cascaded Branch”<br>
+“Unknown”<br>
+“Multilink”<br>
+“CPCP-supportedUnknownStatus”<br>
+“CPCP-supportedActive”<br>
+“CPCP-notSupported”<br>
+“CPCP-supportedNotActive”<br>
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_DemandActivatedLinkState</td>
+                <td>A </td>
+                    <td><br>
+0 (unknown)<br>
+1 (demand-activated and inactive)</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>0</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td>
+                    <ul>
+                         <li>administrativeState<br> – X'01' (unlocked)</li>
+                         <li>availabilityStatus <br>– X'00' (empty set) The resource is<br>
+available for use.</li>
+                         <li>operationalState<br> – Either:<br>
+X'00' (disabled) TG circuit is not
+operational.<br>
+X'01' (enabled) TG circuit is
+operational.</li>
+                         <li>proceduralStatus <br>– One of the following:<br>
+X'00' (empty set) TG is fully
+initialized.<br>
+X'08' (terminating) TG is
+quiescing.</li>
+                         <li>unknownStatus<br> – Either:<br>
+X'00' TG status is known.<br>
+X'01' TG status is not known.</li>
+                         <li>usageState <br>– Either:<br>
+X'00' (idle) TG circuit is not
+operational.<br>
+X'01' (active) TG circuit is
+operational.</li>
+                        </ul></td>
+                    <td>Yes  </td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>tgCircuitId</td>
+                    <td>T</td>
+                    <td>The appnTransmissionGroupCircuit<br>
+identifier<br>
+(a_snaNodeName.tgn.z_snaNodeName)</td>
+                    <td>Init</td>
+                    <td>Req</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>z-TPInstance</td>
+                    <td>T</td>
+                    <td>One object of the following classes:<br>
+appnBrNN<br>
+appnEN<br>
+appnNN<br>
+interchangeNode<br>
+lenNode<br>
+logicalLink (when Composite Node<br>
+using NTRI-class)<br>
+migrationDataHost<br>
+t2-1Node<br>
+t4Node<br>
+t5Node<br>
+virtualRoutingNode</td>
+                    <td>No</td>
+                    <td> — </td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>zDetails</td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <p><b>Note:</b></p>
+            <ol>
+            <li>Only one of the a-TPInstance or z-TPInstance fields can contain an object of t5Node.</li></ol>
+            <h2>appnTransmissionGroupCircuit as ntriTypeAppnTgCircuit
+(*ntriTypeAppnTgCircuit)</h2>
+            <p>The class appnTransmissionGroupCircuit as ntriTypeAppnTgCircuit is used to
+represent a NTRI-like APPN connection.</p>
+            <p>The *ntriTypeAppnTgCircuit represents an appnTransmissionGroupCircuit that is
+connected to a node with the following NTRI-like resources:</p>
+            <ul>
+            <li>NTRI</li>
+                <li>FrameRelay</li>
+                <li>FrameRelay</li>
+                <li>Ethernet</li>
+            </ul>
+            <p>The user can select the *ntriTypeAppnTgCircuit object and run the More Detail
+command to display a view that shows the NTRI-like resources and the t4Node
+that they reside on, the appnTransmissionGroupCircuit, and the node on the other
+side of the appnTransmissionGroupCircuit.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2058</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of *appnTransGroupCircuitCN object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=CN:snaNetID;”<br>
+“1.3.18.0.0.2082=tgCircuitId”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=CN:APPNNETA.APPNNETZ;”<br>
+“1.3.18.0.0.2082=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+                “1.3.18.0.2.4.6=CN:APPNNET;”<br>
+“1.3.18.0.0.2082=NT81I046.22.NT81I056”</li>
+            </ul>
+            <p><b>Note:</b></p>
+            <p>Note use of DRN_prefix NT: in tgCircuitID. It is used to distinguish
+roles. (NT: for *ntriTypeAppnTgCircuit)</p>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+appnTransmissionGroupCircuit as ntriTypeAppnTgCircuit
+(*ntriTypeAppnTgCircuit) object class. It includes the valid field value, the default
+value, the initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 50. Fields for appnTransmissionGroupCircuit as ntriTypeAppnTgCircuit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One *nnDomain object
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>AggregationChild</td>
+                    <td>P</td>
+                    <td>One or more objects of the following
+classes:<br>
+appnTransmissionGroupCircuit (for
+NN-NN or NN-VRN circuits)<br>
+*appnTransGroupCircuitCN (for
+NN-NN or NN-VRN circuits where a</td>
+                    <td>Add</td>
+                    <td>Req</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>circuitID</td>
+                    <td>T</td>
+                    <td>The *interdomainCircuit identifier
+(a_snaNodeName.z_snaNodeName)<br></td>
+                    <td>Init</td>
+                    <td>Req</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>32772 or 65535<br>        <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32772</td>
+                </tr>
+                
+                <tr>
+                    <td>ContainsLogical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“2.9.3.5.7.14”<br>
+ (underlyingConnectionNames)<br>                       
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+*interdomainCircuit object. Specification:
+(drn_prefix) concatenated with<br>
+(a_snaNetID.a_snaNodeName[.z_snaNetID].<br>
+z_snaNodeName)<br>
+Where .z_snaNetID must be omitted if its<br>
+value is the same as a_snaNetID.<br> Examples:<br>
+'IC:APPNNET.NT81I046.NT81I056'<br>
+'IC:APPNNETA.NT81I046.<br>
+APPNNETZ.NT81061</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>(none)</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>No</td>
+                <td>—</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td>
+                    <ul>
+                         <li>administrativeState<br> – X'01' (unlocked)</li>
+                         <li>availabilityStatus <br>– X'00' (empty set) The resource is<br>
+available for use.</li>
+                         <li>operationalState<br> – Either:<br>
+X'00' (disabled) TG circuit is not
+operational.<br>
+X'01' (enabled) TG circuit is
+operational.</li>
+                         <li>proceduralStatus <br>– One of the following:<br>
+X'00' (empty set) TG is fully
+initialized.<br>
+X'08' (terminating) TG is
+quiescing.</li>
+                         <li>unknownStatus<br> – Either:<br>
+X'00' TG status is known.<br>
+X'01' TG status is not known.</li>
+                         <li>usageState <br>– Either:<br>
+X'00' (idle) TG circuit is not
+operational.<br>
+X'01' (active) TG circuit is
+operational.</li>
+                        </ul></td>
+                    <td>Yes  </td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>tgCircuitId</td>
+                    <td>T</td>
+                    <td>The appnTransmissionGroupCircuit<br>
+identifier<br>
+(a_snaNodeName.tgn.z_snaNodeName)</td>
+                    <td>Init</td>
+                    <td>Req</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>z-TPInstance</td>
+                    <td>T</td>
+                    <td>One object of the following classes:<br>
+appnBrNN<br>
+appnEN<br>
+appnNN<br>
+interchangeNode<br>
+lenNode<br>
+logicalLink (when Composite Node<br>
+using NTRI-class)<br>
+migrationDataHost<br>
+t2-1Node<br>
+t4Node<br>
+t5Node<br>
+virtualRoutingNode</td>
+                    <td>No</td>
+                    <td> — </td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>zDetails</td>
+                    <td>T</td>
+                    <td>one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <p><b>Note:</b></p>
+            <p>Either a-TPInstance or z-TPInstance must be linked to a t4Node object</p>
+            <h2>circuit2 as interdomainCircuit (*interdomainCircuit)</h2>
+            <p>The class circuit2 as interdomainCircuit defines the fields that apply to aggregate
+objects representing APPN transmission group (TG) circuits between two APPN
+network nodes or between a network node and a virtual routing node.</p>
+            <p>The *interdomainCircuit object is an aggregate object. It provides status
+aggregation for the appnTransmissionGroupCircuit objects in the
+underlyingConnectionNames field. The status aggregation is limited to the
+underlying TG circuits that support CP-CP sessions between network nodes, and
+the underlying TG circuits between a network node and a virtual routing node.</p>
+            <p>The existence of an *interdomainCircuit object always presupposes the existence of
+one or more underlying appnTransmissionGroupCircuit objects. However, if all of
+the underlying TG circuits are between network nodes and none of the TG circuits
+supports CP-CP sessions, no status aggregation to the *interdomainCircuit object
+occurs. In this case, the *interdomainCircuit object always has a display status of
+Unknown.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2186</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of *appnTransGroupCircuitCN object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=CN:snaNetID;”<br>
+“1.2.124.360501.1.215=tgCircuitId”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=CN:APPNNETA.APPNNETZ;”<br>
+“1.2.124.360501.1.215=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+                “1.3.18.0.2.4.6=CN:APPNNET;”<br>
+“1.2.124.360501.1.215=NT81I046.22.NT81I056”</li>
+            </ul>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields. used by objects of the circuit2 as interdomainCircuit (*interdomainCircuit) object class. It includes the
+valid field value, the default value, the initialization rules, and the modification
+rules for each field.</p>
+            <p><i>Table 51. Fields for circuit2 as interdomainCircuit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>T One *nnDomain object</td>
+                    
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>aDetails  </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationChild</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Zero or one object of:<br>
+                        *interdomainNetworkCircuit (for
+NN-NN circuit between border nodes
+in different *nnDomainNetworks)<br>
+*nnDomainNetwork (for NN-NN or
+NN-VRN circuits)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>circuitID</td>
+                    <td>T</td>
+                    <td> The *interdomainCircuit identifier
+(a_snaNodeName.z_snaNodeName)</td>
+                    <td>Init  </td>
+                    <td>Req</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>32772 or 65535
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32772</td>
+                </tr>
+                <tr>
+                    <td>ContainsLogical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“1.3.18.0.0.2178” (aDetails)<br><br>
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+appnTransmissionGroupCircuit object.
+Specification: (drn_prefix) concatenated
+with<br>
+(a_snaNetID.a_snaNodeName.
+tgn[.z_snaNetID].z_snaNodeName)
+Where .z_snaNetID must be omitted when
+its value is the same as a_snaNetID. Examples:<br>
+'C:APPNNET.NT81I046.22.NT81I056'
+'C:APPNNETA.NT81I046.21.APPNNETZ.
+NT81I061'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:<br>
+“CP-CP Session Support”<br>
+“Demand-Activated Underlying Link”<br>
+“Intersubnetwork Routing Support”<br>
+“Access to Virtual Routing Node”<br>
+“Virtual-Route-Based TG”<br>
+“HPR Support”<br>
+“Branch capable”<br>
+“Other”<br>
+“Branch Uplink”<br>
+“Branch Downlink”<br>
+“Cascaded Branch”<br>
+“Unknown”<br>
+“Multilink”<br>
+“CPCP-supportedUnknownStatus”<br>
+“CPCP-supportedActive”<br>
+“CPCP-notSupported”<br>
+“CPCP-supportedNotActive”<br>
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>memberArcsOf</td>
+                <td>T</td>
+                <td>Zero, one, or two *nnDomainNetwork
+objects</td>
+                <td>No</td>
+                <td>— </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>objectClass</td>
+                <td>T</td>
+                <td>“1.3.18.0.0.2186” (circuit2)</td>
+                <td>No</td>
+                <td>—</td>
+                <td>1.3.18.0.0.2186</td>
+                </tr>
+                <tr>
+                    <td>packages</td>
+                    <td>T</td>
+                    <td>
+                    (none—circuit2Pkg is mandatory and
+intentionally not defined.)</td>
+                    <td>No </td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>supportedConnectionNames</td>
+                    <td>T</td>
+                    <td>Zero or one *interdomainNetworkCircuit
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>ThresholdDegraded</td>
+                    <td>P</td>
+                    <td>One of the following:<br>
+<b>1...</b> Threshold count (one or greater)<br>
+<b>0</b> Always triggered<br>
+                        <b>-1 </b>No threshold<br>
+<b>-2</b> Use a value from the DRT object.</td>
+                    <td>Yes</td>
+                    <td> Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                <td>ThresholdUnsatisfactory</td>
+                    <td>P</td>
+                    <td>One of the following:<br>
+<b>1...</b> Threshold count (one or greater)<br>
+<b>0</b> Always triggered<br>
+                        <b>-1 </b>No threshold<br>
+<b>-2</b> Use a value from the DRT object.</td>
+                    <td>Yes</td>
+                    <td> Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                <td>underlyingConnectionNames</td>
+                    <td>T</td>
+                    <td>One or more objects of the following
+classes:<br>
+appnTransmissionGroupCircuit (for
+NN-NN or NN-VRN circuits, NN can
+be IC)<br>
+*appnTransGroupCircuitCN (for
+composite node)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>z-TPInstance</td>
+                    <td>T</td>
+                    <td>One *nnDomain object</td>
+                <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <h2>circuit2 as interdomainNetworkCircuit (*interdomainNetworkCircuit)</h2>
+            <p>The class circuit2 as interdomainNetworkCircuit defines the fields that apply to
+aggregate objects representing APPN intersubnetwork TG circuits.<br>
+The *interdomainNetworkCircuit object is an aggregate object. It provides status
+aggregation for the *interdomainCircuit objects in the underlyingConnectionNames
+field. These *interdomainCircuit objects have underlying TG circuits that support
+intersubnetwork routing</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2186</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of *appnTransGroupCircuitCN object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=CN:snaNetID;”<br>
+“1.2.124.360501.1.215=tgCircuitId”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=CN:APPNNETA.APPNNETZ;”<br>
+“1.2.124.360501.1.215=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+                “1.3.18.0.2.4.6=CN:APPNNET;”<br>
+“1.2.124.360501.1.215=NT81I046.22.NT81I056”</li>
+            </ul>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields. used by objects of the circuit2 as interdomainCircuit (*interdomainCircuit) object class. It includes the
+valid field value, the default value, the initialization rules, and the modification
+rules for each field.</p>
+            <p><i>Table 52. Fields for circuit2 as interdomainCircuit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>T One *nnDomainNetwork object</td>
+                    
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>aDetails  </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationPriorityValue</td>
+                    <td>P</td>
+                    <td>0–9 Priority value (zero through
+nine)<br>
+-1 Suspended<br>
+-2 Use a value from the DRT object.<br></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more of the following object
+classes:<br>
+interchangeNode<br>
+migrationDataHost<br>
+*t4NodeGateway<br>
+t4Node<br>
+t5Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:<br>
+                        <ul>
+                        <li>32768 if at least one of the underlying
+appnTransmissionGroup objects is
+logically attached to a non-VTAM node
+or the node is unknown.</li>
+                        <li>32771 for all others</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsPhysical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“1.3.18.0.0.2178” (aDetails)<br><br>
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+appnTransmissionGroupCircuit object.
+Specification: (drn_prefix) concatenated
+with<br>
+(a_snaNetID.a_snaNodeName.
+tgn[.z_snaNetID].z_snaNodeName)
+Where .z_snaNetID must be omitted when
+its value is the same as a_snaNetID. Examples:<br>
+'C:APPNNET.NT81I046.22.NT81I056'
+'C:APPNNETA.NT81I046.21.APPNNETZ.
+NT81I061'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:<br>
+“CP-CP Session Support”<br>
+“Demand-Activated Underlying Link”<br>
+“Intersubnetwork Routing Support”<br>
+“Access to Virtual Routing Node”<br>
+“Virtual-Route-Based TG”<br>
+“HPR Support”<br>
+“Branch capable”<br>
+“Other”<br>
+“Branch Uplink”<br>
+“Branch Downlink”<br>
+“Cascaded Branch”<br>
+“Unknown”<br>
+“Multilink”<br>
+“CPCP-supportedUnknownStatus”<br>
+“CPCP-supportedActive”<br>
+“CPCP-notSupported”<br>
+“CPCP-supportedNotActive”<br>
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>memberArcsOf</td>
+                <td>T</td>
+                <td>Zero, one, or two *nnDomainNetwork
+objects</td>
+                <td>No</td>
+                <td>— </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>objectClass</td>
+                <td>T</td>
+                <td>“1.3.18.0.0.2186” (circuit2)</td>
+                <td>No</td>
+                <td>—</td>
+                <td>1.3.18.0.0.2186</td>
+                </tr>
+                <tr>
+                    <td>packages</td>
+                    <td>T</td>
+                    <td>
+                    (none—circuit2Pkg is mandatory and
+intentionally not defined.)</td>
+                    <td>No </td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>supportedConnectionNames</td>
+                    <td>T</td>
+                    <td>Zero or one *interdomainNetworkCircuit
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>ThresholdDegraded</td>
+                    <td>P</td>
+                    <td>One of the following:<br>
+<b>1...</b> Threshold count (one or greater)<br>
+<b>0</b> Always triggered<br>
+                        <b>-1 </b>No threshold<br>
+<b>-2</b> Use a value from the DRT object.</td>
+                    <td>Yes</td>
+                    <td> Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                <td>ThresholdUnsatisfactory</td>
+                    <td>P</td>
+                    <td>One of the following:<br>
+<b>1...</b> Threshold count (one or greater)<br>
+<b>0</b> Always triggered<br>
+                        <b>-1 </b>No threshold<br>
+<b>-2</b> Use a value from the DRT object.</td>
+                    <td>Yes</td>
+                    <td> Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                <td>underlyingConnectionNames</td>
+                    <td>T</td>
+                    <td>One or more objects of the following
+classes:<br>
+appnTransmissionGroupCircuit (for
+NN-NN or NN-VRN circuits, NN can
+be IC)<br>
+*appnTransGroupCircuitCN (for
+composite node)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>z-TPInstance</td>
+                    <td>T</td>
+                    <td>One *nnDomain object</td>
+                <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <h2>crossDomainResource</h2>
+            <p>The class crossDomainResource defines the fields that apply to cross domain
+resource objects.</p>
+            <p>A crossDomainResource is a logical unit (for example, an application program, a
+peripheral node, or a terminal) that is controlled by another VTAM domain.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2186</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of *appnTransGroupCircuitCN object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=CN:snaNetID;”<br>
+“1.2.124.360501.1.215=tgCircuitId”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=CN:APPNNETA.APPNNETZ;”<br>
+“1.2.124.360501.1.215=NT81I046.21.NT81I061”</li>
+                <li>Alternate example:<br>
+                “1.3.18.0.2.4.6=CN:APPNNET;”<br>
+“1.2.124.360501.1.215=NT81I046.22.NT81I056”</li>
+            </ul>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields. used by objects of the circuit2 as interdomainCircuit (*interdomainCircuit) object class. It includes the
+valid field value, the default value, the initialization rules, and the modification
+rules for each field.</p>
+            <p><i>Table 53. Fields for circuit2 as interdomainCircuit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>T One *nnDomainNetwork object</td>
+                    
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>aDetails  </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationPriorityValue</td>
+                    <td>P</td>
+                    <td>0–9 Priority value (zero through
+nine)<br>
+-1 Suspended<br>
+-2 Use a value from the DRT object.<br></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more of the following object
+classes:<br>
+interchangeNode<br>
+migrationDataHost<br>
+*t4NodeGateway<br>
+t4Node<br>
+t5Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:<br>
+                        <ul>
+                        <li>32768 if at least one of the underlying
+appnTransmissionGroup objects is
+logically attached to a non-VTAM node
+or the node is unknown.</li>
+                        <li>32771 for all others</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsPhysical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“1.3.18.0.0.2178” (aDetails)<br><br>
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+appnTransmissionGroupCircuit object.
+Specification: (drn_prefix) concatenated
+with<br>
+(a_snaNetID.a_snaNodeName.
+tgn[.z_snaNetID].z_snaNodeName)
+Where .z_snaNetID must be omitted when
+its value is the same as a_snaNetID. Examples:<br>
+'C:APPNNET.NT81I046.22.NT81I056'
+'C:APPNNETA.NT81I046.21.APPNNETZ.
+NT81I061'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:<br>
+“CP-CP Session Support”<br>
+“Demand-Activated Underlying Link”<br>
+“Intersubnetwork Routing Support”<br>
+“Access to Virtual Routing Node”<br>
+“Virtual-Route-Based TG”<br>
+“HPR Support”<br>
+“Branch capable”<br>
+“Other”<br>
+“Branch Uplink”<br>
+“Branch Downlink”<br>
+“Cascaded Branch”<br>
+“Unknown”<br>
+“Multilink”<br>
+“CPCP-supportedUnknownStatus”<br>
+“CPCP-supportedActive”<br>
+“CPCP-notSupported”<br>
+“CPCP-supportedNotActive”<br>
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>memberArcsOf</td>
+                <td>T</td>
+                <td>Zero, one, or two *nnDomainNetwork
+objects</td>
+                <td>No</td>
+                <td>— </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>objectClass</td>
+                <td>T</td>
+                <td>“1.3.18.0.0.2186” (circuit2)</td>
+                <td>No</td>
+                <td>—</td>
+                <td>1.3.18.0.0.2186</td>
+                </tr>
+                <tr>
+                    <td>packages</td>
+                    <td>T</td>
+                    <td>
+                    (none—circuit2Pkg is mandatory and
+intentionally not defined.)</td>
+                    <td>No </td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>states</td>
+                    <td>T</td>
+                    <td> administrativeState<br> – X'01' (unlocked)<br>
+<br> availabilityStatus<br> – X'00' (empty set) The resource is
+available for use. <br> nativeStatus – One of the following:
+X'00' (active)
+X'01' (activeWithSession)
+X'02' (inactive)
+X'03' (neverActive)
+X'04' (pendingActive)
+X'05' (pendingInactive)
+X'06' (connectable)
+X'07' (routable)
+X'0A' (released)
+X'0B' (reset)
+X'FF' (is not currently set)
+<br> operationalState – Either:
+X'00' (disabled)
+X'01' (enabled)<br>
+ proceduralStatus – One of the following:
+X'00' (empty set) Fully initialized
+X'40' (not initialized) Has not
+been active and can be
+initialized by the resource,
+autonomously
+X'20' (initializing) Is pending
+active
+X'08' (terminating) Is pending
+inactive
+<br>unknownStatus – Either:
+X'00' Status is known.
+X'01' Status is not known. v usageState – Either:
+X'00' (idle) Is not operational.
+X'01' (active) Is operational.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>see page 521</td>
+                </tr>
+            </table>
+            <h2>crossDomainResourceManager</h2>
+            <p>The class crossDomainResourceManager defines the fields that apply to cross
+domain resource manager objects.</p>
+            <p>A crossDomainResourceManager is the part of an SSCP that supports cross-domain
+session (SSCP-SSCP session) setup and take down.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2186</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of *appnTransGroupCircuitCN object in the following form:</p>
+            <ul>
+            <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2032=snaNodeName;”<br>
+“1.3.18.0.0.2032=snaNodeName”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=SNANET;”<br>
+“1.3.18.0.0.2032=NT81I056;”<br>
+“1.3.18.0.0.2032=SNANET.SSCP2”</li>
+                
+            </ul>
+            <p><b>Note:</b> The value for the second 1.3.18.0.0.2032 shown above contains the netid of
+crossDomainResourceManager, followed by a period, followed by the
+crossDomainResourceManager name. This occurs when the NETWORK statement
+is coded for the crossDomainResourceManager in the CDRM definitionGroup. If
+the NETWORK statement is not coded, the value for the second 1.3.18.0.0.2023 will
+only contain the crossDomainResourceManager name.</p>
+            <h2>Using Object Class Fields</h2>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields. used by objects of the circuit2 as interdomainCircuit (*interdomainCircuit) object class. It includes the
+valid field value, the default value, the initialization rules, and the modification
+rules for each field.</p>
+            <p><i>Table 54. Fields for circuit2 as interdomainCircuit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>a-TPInstance     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>T One *nnDomainNetwork object</td>
+                    
+                    <td>No </td>
+                    
+                    <td>—</td>
+                    
+                    <td>Null  </td>
+                </tr>
+                <tr>
+                    <td>aDetails  </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Either:   
+                    Zero or one object of the following
+classes:<br>
+*interdomainCircuit (for NN-NN or
+NN-VRN circuit)<br>
+*nnDomain (for NNserver-EN circuit)<br>
+*appnTransGroupCircuitCN (if t4Node
+or *t4NodeGateway that this instance
+is connected to is part of a composite
+node)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>AggregationPriorityValue</td>
+                    <td>P</td>
+                    <td>0–9 Priority value (zero through
+nine)<br>
+-1 Suspended<br>
+-2 Use a value from the DRT object.<br></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more of the following object
+classes:<br>
+interchangeNode<br>
+migrationDataHost<br>
+*t4NodeGateway<br>
+t4Node<br>
+t5Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:<br>
+                        <ul>
+                        <li>32768 if at least one of the underlying
+appnTransmissionGroup objects is
+logically attached to a non-VTAM node
+or the node is unknown.</li>
+                        <li>32771 for all others</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsPhysical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following
+values:<br>
+“1.3.18.0.0.2178” (aDetails)<br><br>
+“1.3.18.0.0.2179” (zDetails)<br>
+“0.0.13.3100.0.7.1” (a-TPInstance)<br>
+“0.0.13.3100.0.7.55” (z-TPInstance)</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the
+appnTransmissionGroupCircuit object.
+Specification: (drn_prefix) concatenated
+with<br>
+(a_snaNetID.a_snaNodeName.
+tgn[.z_snaNetID].z_snaNodeName)
+Where .z_snaNetID must be omitted when
+its value is the same as a_snaNetID. Examples:<br>
+'C:APPNNET.NT81I046.22.NT81I056'
+'C:APPNNETA.NT81I046.21.APPNNETZ.
+NT81I061'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:<br>
+“CP-CP Session Support”<br>
+“Demand-Activated Underlying Link”<br>
+“Intersubnetwork Routing Support”<br>
+“Access to Virtual Routing Node”<br>
+“Virtual-Route-Based TG”<br>
+“HPR Support”<br>
+“Branch capable”<br>
+“Other”<br>
+“Branch Uplink”<br>
+“Branch Downlink”<br>
+“Cascaded Branch”<br>
+“Unknown”<br>
+“Multilink”<br>
+“CPCP-supportedUnknownStatus”<br>
+“CPCP-supportedActive”<br>
+“CPCP-notSupported”<br>
+“CPCP-supportedNotActive”<br>
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>memberArcsOf</td>
+                <td>T</td>
+                <td>Zero, one, or two *nnDomainNetwork
+objects</td>
+                <td>No</td>
+                <td>— </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>objectClass</td>
+                <td>T</td>
+                <td>“1.3.18.0.0.2186” (circuit2)</td>
+                <td>No</td>
+                <td>—</td>
+                <td>1.3.18.0.0.2186</td>
+                </tr>
+                <tr>
+                    <td>packages</td>
+                    <td>T</td>
+                    <td>
+                    (none—circuit2Pkg is mandatory and
+intentionally not defined.)</td>
+                    <td>No </td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>states</td>
+                    <td>T</td>
+                    <td> administrativeState<br> – X'01' (unlocked)<br>
+<br> availabilityStatus<br> – X'00' (empty set) The resource is
+available for use. <br> nativeStatus – One of the following:
+X'00' (active)
+X'01' (activeWithSession)
+X'02' (inactive)
+X'03' (neverActive)
+X'04' (pendingActive)
+X'05' (pendingInactive)
+X'06' (connectable)
+X'07' (routable)
+X'0A' (released)
+X'0B' (reset)
+X'FF' (is not currently set)
+<br> operationalState – Either:
+X'00' (disabled)
+X'01' (enabled)<br>
+ proceduralStatus – One of the following:
+X'00' (empty set) Fully initialized
+X'40' (not initialized) Has not
+been active and can be
+initialized by the resource,
+autonomously
+X'20' (initializing) Is pending
+active
+X'08' (terminating) Is pending
+inactive
+<br>unknownStatus – Either:
+X'00' Status is known.
+X'01' Status is not known. v usageState – Either:
+X'00' (idle) Is not operational.
+X'01' (active) Is operational.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>see page 521</td>
+                </tr>
+            </table>
+            <h2>definitionGroup</h2>
+            <p>The class definitionGroup defines the fields that apply to major node objects
+reported by the VTAM agent.</p>
+            <p>A definitionGroup is a VTAM major node, which is a grouping of similar resource
+definitions.</p>
+            <p>The following definitionGroup types are valid:</p>
+            <ul>
+            <li>APPL</li>
+            <li>CA</li>
+            <li>CDRM</li>
+            <li>CDRSC</li>
+            <li>LAN</li>
+            <li>LCLNONSNA</li>
+            <li>LOCALSNA</li>
+            <li>NCP</li>
+            <li>PACKET</li>
+            <li>SWITCHED</li>
+            <li>TCP</li>
+            <li>TRL</li>
+            <li>XCA</li>
+            </ul>
+            <p>The attribute definitionGroupMember will not always contain an object link to all
+objects that are members of this definitionGroup. Only the necessary object links
+are performed to enable reasonable views.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1821</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of appnEN object in the following form:</p>
+            <ul>
+                <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2032=snaNodeName;”<br>
+“1.3.18.0.0.2272=definitionGroupName”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=SNANET;”<br>
+“1.3.18.0.0.2032=NT81I056;”<br>
+“1.3.18.0.0.2272=APPL.XYZAPPLS”</li>
+                <p><b>Note:</b> The definitionGroupName will always contain a type of
+definitionGroup, a period, and then a name of the major node. See the
+following list which contains the types of major nodes.</p>
+                <p><b>Using Object Class Fields</b></p>
+            </ul>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by the real objects
+of the appnEN object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 55. Fields for appnTransmissionGroupCircuit as appnTransGroupCircuitCN Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>appnTGcapabilities     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One byte from SNA control vector</td>
+                    
+                    <td>Init</td>
+                    
+                    <td>Opt</td>
+                    
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>brNNTgLocalLinkType  </td>
+                    <td>A</td>
+                    <td>Either:<br>
+0 Not reported<br>
+1 The branch link type is neither a branch
+uplink nor a branch downlink<br>
+2 The transmission group is a branch
+uplink<br>
+3 The transmission group is a branch
+downlink to an end node<br>
+4 The transmission group is a branch
+downlink to a cascaded branch network
+node<br>
+255 The agent cannot determine the branch
+link type<br>
+ </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:   
+                    <ul>
+                        <li>32771 if logically attached to a VTAM node</li>
+                        <li>32768 if the node is not a VTAM node or it is
+unknown</li>
+                        </ul></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsLogical</td>
+                    <td>A</td>
+                    <td>SELFDEFINING containing the following values:
+“2.9.3.5.7.14” (underlyingConnectionNames)
+“mySuperior”</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for example:
+LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionStatus</td>
+                    <td>T</td>
+                    <td>Either:<br>
+                    0 Not reported<br>
+1 CP-CP sessions are supported<br>
+2 CP-CP sessions are supported and the
+sender's contention-winner CP-CP
+session is active<br>
+3 CP-CP sessions are not supported and
+the sender's contention-winner CP-CP
+session is not active<br>
+4 CP-CP sessions are supported but the
+sender's contention-winner CP-CP
+session is not active</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionSupport</td>
+                    <td>T</td>
+                    <td>Either:<br>
+0 CP-CP sessions are not supported<br>
+1 CP-CP sessions are supported</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>deleteIndicator</td>
+                    <td>A</td>
+                    <td>Enumerated value for delete processing</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnTransmissionGroup
+object. Specification:
+(snaNetID.snaNodeName.tgn
+[.adj_snaNetID].adj_snaNodeName)
+(snaNetID.virtualRoutingNodeName.
+[.adj_snaNetID].adj_snaNodeName) or (snaNetID.snaNodeName.tgn
+[.adj_snaNetID].
+adj_virtualRoutingNodeName)
+Where .adj_snaNetID must be omitted if its value
+is the same as snaNetID Examples:
+'APPNNETB.NT81I056.21.APPNNETA.
+NT81I071' or 'APPNNET.VIRTUAL.21.
+NT81I071'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:
+“CP-CP Session Support”
+“Demand-Activated Underlying Link”
+“Intersubnetwork Routing Support”
+“Access to Virtual Routing Node”
+“Virtual-Route-Based TG”
+“HPR Support”
+“Branch capable”
+“Other”
+“Branch Uplink”
+“Branch Downlink”
+“Cascaded Branch”
+“Unknown”
+“Multilink”
+“CPCP-supportedUnknownStatus”
+“CPCP-supportedActive”
+“CPCP-notSupported”
+“CPCP-supportedNotActive”
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_DemandActivatedLinkState</td>
+                <td>A </td>
+                    <td><br>
+0 (unknown)<br>
+1 (demand-activated and inactive)</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>0</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+            </table> 
+            <h2>lenNode</h2>
+                <p>The class lenNode defines the fields that apply to objects of low-entry networking
+nodes.</p>
+            <p>A LEN node is an SNA type 2.1 node that:</p>
+            <ul>
+            <li>Supports its users</li>
+            <li>Provides the following services:</li>
+            </ul>
+            <p>– Link-connection<br>
+– Local directory<br>
+– Management</p>
+            <p>A LEN node can participate in an APPN network by using the services of a
+network node for session requests that involve nodes to which it has no direct
+connections. This is accomplished by defining the remote logical units (LUs) at the
+LEN node as though they existed at the network node (NN).</p>
+            <p>A LEN node can be concurrently attached to multiple NNs. However, each remote
+LU, to which the LEN node can have sessions, is defined at the LEN node as
+existing on only one of the NNs.</p>
+            <p>LEN nodes do not register their LUs with an NN server. Instead, the LEN node's
+LUs must be defined at each NN to which the LEN node is attached. Each NN
+provides directory and intermediate session routing services on behalf of the LEN
+node. As for all type 2.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1827</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of lenNode object in the following form:</p>
+            <ul>
+                <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2032=snaNodeName”</li>
+                 <li>Example:<br>
+“1.3.18.0.2.4.6=APPNNET;”<br>
+“1.3.18.0.0.2032=NT81I056”</li>
+            </ul>
+            <p><b>Using Object Class Fields</b></p>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+lenNode object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 57. Fields for lenNode Object Class</i></p>
+            
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>mySubordinates.LUCDRSC2</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes: crossDomainResource
+logicalUnit</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.NonDGport   </td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>NO</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.port</td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                <td>mySubordinates.snaLocalTopo    </td>
+                    <td>T</td>
+                    <td>Zero or one *enLocalTopology object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>objectClass</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1821” (appnEN)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1821</td>
+                </tr>
+                <tr>
+                <td>opEquipmentList
+  </td>
+                <td>T</td>
+                <td>A list of hardware packaging elements</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null<td>
+                </tr>
+                <tr>
+                <td>packages</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1851” (appnENpkg)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1851</td>
+                </tr>
+                <tr>
+                <td>PreviousObjectIDs
+                </td>
+                    <td>A</td>
+                    <td>List of ObjectIDs</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>snaNodeName</td>
+                    <td>T</td>
+                    <td>The appnEN unqualified control point
+name (excludes netID)</td>
+                    <td>Ini</td>
+                    <td>opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td><ul>
+                        <li>administrativeState – X'01' (unlocked)</li>
+                        <li>availabilityStatus – X'00' (unlocked)</li>
+                        <li>operationalState – X'01' (enabled) Is active or pending
+inactive</li>
+                        <li>proceduralStatus – X'00' (empty set) Fully initialized</li>
+                        <li>unknownStatus – Either:
+X'00' End node status is known.
+X'01' End Node status is not
+known.</li>
+                        <li>usageState – X'01' (active) Is operational.</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>sysplexInfo</td>
+                    <td>T</td>
+                    <td>Name of a coupled system complex</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>ToposnaLucolMontime</td>
+                    <td>A</td>
+                    <td>-1 to n</td>
+                    <td>Yes</td>
+                    <td>Req</td>
+                    <td>-1</td>
+                </tr>
+                
+                    
+<tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                    <td>mySubordinates.logicalLink</td>
+                    <td>T</td>
+                    <td>Zero or more logicalLink objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.LU  </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+logicalUnit
+luGroup</td> 
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            <h2>logicalLink</h2>
+            <p>The class logicalLink defines the fields that apply to logical link objects.</p>
+            <P>Table 45. Fields for appnEN Object Class</P>
+            <p>A logical link provides a connection between two logically adjacent nodes. The
+nodes can be any of the following types:</p>
+            <ul>
+            <li>Type 1 nodes</li>
+                <li>Type 2.0 nodes</li>
+                <li>Type 2.1 nodes:<br>
+                – APPN network nodes<br> – APPN end nodes<br> – LEN nodes</li>
+                <li>Type 4 nodes</li>
+                <li>Type 5 nodes</li>
+            </ul>
+            <p>Each logical link between two nodes is uniquely identified within a node by a link
+name. Both nodes can have their own link name for the logical link, or just one of
+the nodes can have a link name for the logical link. The link name is used when
+activating or deactivating a logical link.</p>
+            <p>The state of a logical link is unidirectional as seen from each of the two adjacent
+nodes. Under normal conditions, the state of a logical link is the same in both
+nodes. During link activation and deactivation or when certain errors occur, the
+state of a logical link can be different in the two nodes.</p>
+            <p>A logical link can be configured such that APPN automatically can activate it on
+demand in order to activate a session that uses the logical link. When all the
+sessions using the logical link are ended, APPN might automatically deactivate the
+logical link.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2085</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of lenNode object in the following form:</p>
+            <ul>
+                <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2032=snaNodeName;”<br>
+“1.3.18.0.0.2133=linkName”</li>
+                 <li>Example:<br>
+“1.3.18.0.2.4.6=APPNNET;”<br>
+“1.3.18.0.0.2032=NT81I056;”<br>
+“1.3.18.0.0.2133=PAMUT4”</li>
+            </ul>
+            <p>If the logicalLink object can be multiply owned (more than one agent can
+report on the same object), then the second relative distinguished name (RDN)
+is not used when naming this object in RODM. In this case, the name must be
+an agent-independent name. The removal of the second RDN accomplishes this
+requirement. For more information, refer to the IBM Tivoli NetView for z/OS
+SNA Topology Manager Implementation Guide.</p>
+            <p>The logicalLink's that can be multiply owned are:</p>
+            <ul>
+            <li>logicalLink objects that are part of the NCP definitionGroup at a VTAM
+node.</li>
+            <li>logicalLink objects that are part of the SWITCHED definitionGroup at a
+VTAM node<br>
+                The name will have the following form:</li>
+                <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2133=linkName”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=SNANET;”<br>
+“1.3.18.0.0.2133=PU4”</li>
+            </ul>
+            <p><b>Using Object Class Fields</b></p>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+lenNode object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 59. Fields for logicalUnit Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+  <tr>
+    <td>AggregationParent</td>
+    <td>P</td>
+      <td>Zero or one *nnDomain object</td>
+    <td>Add</td>
+      <td>Opt</td>
+      <td>Null</td>
+  </tr>
+  <tr>
+    <td>AggregationPriorityValue</td>
+    <td>P</td>
+    <td>0–9 Priority value (zero through
+nine)
+-1 Suspended
+-2 Use a value from the DRT object.</td>
+      <td>Yes</td>
+      <td>Opt</td>
+      <td>-2</td>
+  </tr>
+  <tr>
+    <td>attachedCircuitList</td>
+    <td>T</td>
+    <td>Zero or more objects of the following
+classes:
+appnTransmissionGroupCircuit
+*ntriTypeAppnTgCircuit</td>
+      <td>No</td>
+      <td>—</td>
+      <td>Null</td>
+  </tr>
+                <tr>
+                    <td>attachedCircuitListCN</td>
+                    <td>T</td>
+                    <td>Zero or more objects of class
+*appnTransGroupCircuitCN</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>attachedSubareaNode</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+t5Node
+t4Node</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>32770 or 65535</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32770</td>
+                </tr>
+                <tr>
+                <td>ContainsLogical</td>
+                    <td>P</td>
+                    <td>SELFDEFINING containing the following</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <td>ContainsPhysical</td>
+                <td>P</td>
+                <td>SELFDEFINING containing the following
+values:
+“mySubordinates.logicalLink”
+“mySubordinates.port”</td>
+                <td>Add</td>
+                <td>Opt</td>
+                <td>Valid values</td>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for
+example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnEN object.
+Specification: snaNetID.snaNodeName
+Example: 'APPNNET.NT81I056</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                    
+                    
+                </tr>
+
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>DisplayResourceOtherData  A</td>
+                    <td>P</td>
+                    <td>ny combination of the following
+separated by a comma:
+“Sysplex=sysplexInfo”</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceType    </td>
+                    <td>P </td>
+                    <td>DUIXC_RTN_APPN_EN</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus</td>
+                    <td>P</td>
+                    <td>See “DisplayStatus” on page 385 </td>
+                    <td>Yes</td>
+                    <td>Req </td>
+                    <td>132</td>
+                    
+                </tr>
+                <tr>
+                <td>ExceptionViewList    </td>
+                    <td>P</td>
+                    <td>Names of exception views</td>
+                    <td>Yes </td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>FLB_Creator     </td>
+                    <td>A</td>
+                    <td>Any printable named string</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_MonitoringLocalTopology
+  </td>
+                <td>A</td>
+                <td>One of the following values:
+                    0 (no)
+1 (ongoing)</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                    <td>A</td>
+                    <td>Internet Protocol address.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+ 
+                </td>
+                    <td>P</td>
+                    <td>Locate the name of the appnEN object.
+Specification: snaNodeName Example:
+'NT81I056'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>memberOf </td>
+                    <td>T </td>
+                    <td>One or more objects of the following
+classes:
+*nnDomain
+*enLocalTopology
+*nnLocalTopology</td>
+                    <td>No</td>
+                    <td> —</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>monitoringLuCollection A</td>
+                    <td>A</td>
+                    <td>Either:
+                        <ol><li> Set of LUs is not being
+monitored</li>
+<li> Set of LUs is in transition for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is complete for
+continuous monitor of the
+luCollection</li>
+<li>Set of LUs is in transition for a
+timed monitor of the
+luCollection</li>
+<li> Set of LUs is complete for a
+timed monitor of the
+luCollection</li></ol>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.appnTrans- missionGroup
+ 
+ </td>
+                    <td>T</td>
+                    <td>Zero or one appnTransmissionGroup
+object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.CDRSC  Zero or more crossDomainResource objects
+  </td>
+                    <td>T</td>
+                    <td>Zero or more crossDomainResource objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.definitionGroup</td>
+                    <td>T</td>
+                    <td>Zero or more definitionGroup objects</td>
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                    <td>mySubordinates.logicalLink</td>
+                    <td>T</td>
+                    <td>Zero or more logicalLink objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.LU  </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes:
+logicalUnit
+luGroup</td> 
+                    <td>No</td> 
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.LUCDRSC2</td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following
+classes: crossDomainResource
+logicalUnit</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>mySubordinates.NonDGport   </td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>NO</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>mySubordinates.port</td>
+                    <td>T</td>
+                    <td>Zero or more port objects</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                    
+                </tr>
+                <tr>
+                <td>mySubordinates.snaLocalTopo    </td>
+                    <td>T</td>
+                    <td>Zero or one *enLocalTopology object</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>objectClass</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1821” (appnEN)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1821</td>
+                </tr>
+                <tr>
+                <td>opEquipmentList
+  </td>
+                <td>T</td>
+                <td>A list of hardware packaging elements</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null<td>
+                </tr>
+                <tr>
+                <td>packages</td>
+                    <td>T</td>
+                    <td>“1.3.18.0.0.1851” (appnENpkg)</td>
+                    <td>No</td>
+                    <td>—</td>
+                    <td>1.3.18.0.0.1851</td>
+                </tr>
+                <tr>
+                <td>PreviousObjectIDs
+                </td>
+                    <td>A</td>
+                    <td>List of ObjectIDs</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                    </tr>
+                <tr>
+                <td>snaNodeName</td>
+                    <td>T</td>
+                    <td>The appnEN unqualified control point
+name (excludes netID)</td>
+                    <td>Ini</td>
+                    <td>opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>states</td>
+                    <td>T</td>
+                    <td><ul>
+                        <li>administrativeState – X'01' (unlocked)</li>
+                        <li>availabilityStatus – X'00' (unlocked)</li>
+                        <li>operationalState – X'01' (enabled) Is active or pending
+inactive</li>
+                        <li>proceduralStatus – X'00' (empty set) Fully initialized</li>
+                        <li>unknownStatus – Either:
+X'00' End node status is known.
+X'01' End Node status is not
+known.</li>
+                        <li>usageState – X'01' (active) Is operational.</li>
+                        </ul>
+                    </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>See page 521</td>
+                </tr>
+                <tr>
+                    <td>sysplexInfo</td>
+                    <td>T</td>
+                    <td>Name of a coupled system complex</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>ToposnaLucolMontime</td>
+                    <td>A</td>
+                    <td>-1 to n</td>
+                    <td>Yes</td>
+                    <td>Req</td>
+                    <td>-1</td>
+                </tr>
+            </table>
+            <h2>luGroup</h2>
+            <p>The class luGroup defines the fields that apply to logical unit (LU) group objects.</p>
+            <p>An luGroup object represents one or more LUs that have been grouped together.</p>
+            <p>One example of an LU group is the generic resource function of VTAM. This
+function allows multiple LUs to be represented by one generic resource name. The
+generic resource function is only available in a sysplex environment that is running
+under a release of z/OS that supports coupling facility services.</p>
+            <p>One example of an LU group is the generic resource function of VTAM. This
+function allows multiple LUs to be represented by one generic resource name. The
+generic resource function is only available in a sysplex environment that is running
+under a release of z/OS that supports coupling facility services.</p>
+            <p>Another example of an LU group is the user variable (USERVAR) function of
+VTAM. This function allows the use of a generic name to represent an LU. A
+USERVAR can be assigned to only one LU at a time. Thus, the relationship
+between a USERVAR and the real LU resource it represents can dynamically
+change.</p>
+            <p>Another example of an LU group is the user variable (USERVAR) function of
+VTAM. This function allows the use of a generic name to represent an LU. A
+USERVAR can be assigned to only one LU at a time. Thus, the relationship
+between a USERVAR and the real LU resource it represents can dynamically
+change.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.1821</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of appnEN object in the following form:</p>
+            <ul>
+                <li>Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”               “1.3.18.0.0.2044=transmissionGroupId”</li>
+                <li>Alternate Specification:
+“1.3.18.0.2.4.6=snaNetID;”
+“1.3.18.0.0.2032=snaNodeName”               “1.3.18.0.0.2044=transmissionGroupId”</li>
+                <li>Example:
+“1.3.18.0.2.4.6=APPNNET;”
+“1.3.18.0.0.2032=NT81I056”
+ “1.3.18.0.0.2044=21.APPNNET.NT81I071”</li>
+                <p><b>Note:Note use of DRN_prefix CN: in circuitID. It is used to distinguish roles.
+(CN: for *appnTransGroupCircuitCN)</b></p>
+                <p><b>Using Object Class Fields</b></p>
+            </ul>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by the real objects
+of the appnEN object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 60.  Fields for migrationDataHost Object Class</i></p>
+            <table style="width:100%">
+  <tr>
+    <th>Field</th>
+    <th>Type </th>
+      <th>Valid Values</th>
+    <th>Mod </th>
+      <th>O/R</th>
+      <th>Default</th>
+  </tr>
+                <tr>
+                    <td>appnTGcapabilities     </td>
+                    
+                    <td>T</td>
+                    
+                    <td>One byte from SNA control vector</td>
+                    
+                    <td>Init</td>
+                    
+                    <td>Opt</td>
+                    
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>brNNTgLocalLinkType  </td>
+                    <td>A</td>
+                    <td>Either:<br>
+0 Not reported<br>
+1 The branch link type is neither a branch
+uplink nor a branch downlink<br>
+2 The transmission group is a branch
+uplink<br>
+3 The transmission group is a branch
+downlink to an end node<br>
+4 The transmission group is a branch
+downlink to a cascaded branch network
+node<br>
+255 The agent cannot determine the branch
+link type<br>
+ </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either:   
+                    <ul>
+                        <li>32771 if logically attached to a VTAM node</li>
+                        <li>32768 if the node is not a VTAM node or it is
+unknown</li>
+                        </ul></td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>32768</td>
+                </tr>
+                <tr>
+                    <td>ContainsLogical</td>
+                    <td>A</td>
+                    <td>SELFDEFINING containing the following values:
+“2.9.3.5.7.14” (underlyingConnectionNames)
+“mySuperior”</td>
+                    <td>Add</td>
+                    <td>Opt</td>
+                    <td>Valid values</td>
+                </tr>
+                <tr>
+                    <td>Correlater</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for example:
+LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionStatus</td>
+                    <td>T</td>
+                    <td>Either:<br>
+                    0 Not reported<br>
+1 CP-CP sessions are supported<br>
+2 CP-CP sessions are supported and the
+sender's contention-winner CP-CP
+session is active<br>
+3 CP-CP sessions are not supported and
+the sender's contention-winner CP-CP
+session is not active<br>
+4 CP-CP sessions are supported but the
+sender's contention-winner CP-CP
+session is not active</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>cp-cpSessionSupport</td>
+                    <td>T</td>
+                    <td>Either:<br>
+0 CP-CP sessions are not supported<br>
+1 CP-CP sessions are supported</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>deleteIndicator</td>
+                    <td>A</td>
+                    <td>Enumerated value for delete processing</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>DisplayResourceName</td>
+                    <td>P</td>
+                    <td>Display the name of the appnTransmissionGroup
+object. Specification:
+(snaNetID.snaNodeName.tgn
+[.adj_snaNetID].adj_snaNodeName)
+(snaNetID.virtualRoutingNodeName.
+[.adj_snaNetID].adj_snaNodeName) or (snaNetID.snaNodeName.tgn
+[.adj_snaNetID].
+adj_virtualRoutingNodeName)
+Where .adj_snaNetID must be omitted if its value
+is the same as snaNetID Examples:
+'APPNNETB.NT81I056.21.APPNNETA.
+NT81I071' or 'APPNNET.VIRTUAL.21.
+NT81I071'</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData  </td>
+                <td>P</td>
+                <td>The following are valid values:
+“CP-CP Session Support”
+“Demand-Activated Underlying Link”
+“Intersubnetwork Routing Support”
+“Access to Virtual Routing Node”
+“Virtual-Route-Based TG”
+“HPR Support”
+“Branch capable”
+“Other”
+“Branch Uplink”
+“Branch Downlink”
+“Cascaded Branch”
+“Unknown”
+“Multilink”
+“CPCP-supportedUnknownStatus”
+“CPCP-supportedActive”
+“CPCP-notSupported”
+“CPCP-supportedNotActive”
+“CPCP-statusError”</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType     </td>
+                <td>P</td>
+                <td>DUIXC_LTN_APPN_TRN_GROUP</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus    </td>
+                <td>P</td>
+                <td>See “DisplayStatus” on page 385</td>
+                <td>Yes</td>
+                <td>Req</td>
+                <td>132</td>
+                </tr>
+                <tr>
+                <td>endpointForArc</td>
+                <td>T</td>
+                <td>One of the following objects:
+appnTransmissionGroupCircuit</td>
+                <td>No</td>
+                <td>—</td>
+                <td>Null</td>
+                </tr>
+                <tr> <td>ExceptionViewList</td>
+                <td>P </td>
+                
+                <td> Names of exception views</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>FLB_Creator</td>
+                <td>A</td>
+                <td>Any printable named string</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>FLB</td>
+                </tr>
+                <tr>
+                <td>FLB_DemandActivatedLinkState</td>
+                <td>A </td>
+                    <td><br>
+0 (unknown)<br>
+1 (demand-activated and inactive)</td>
+                <td>Yes</td>
+                <td>Opt</td>
+                <td>0</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>iPAddress</td>
+                <td>A</td>
+                <td>Internet Protocol address.</td>
+                <td>Yes</td>
+                <td>Opt </td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>LocateName  
+  </td>
+                <td>P</td>
+                <td>Locate the name of the appnTransmissionGroup
+object. Specification: ( snaNodeName.tgn) or
+( virtualRoutingNodeName.tgn) Example:
+'NT81I056.21'</td>
+                <td>Init</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+            </table> 
+            <h2>port</h2>
+            <p>The port class defines the fields that apply to port objects.</p>
+            <p>A port provides a data link control (DLC) connection point within a node for a
+logical link. A port such as, the IBM token ring DLC, has an address. The address
+is used when making a connection, where the node initiating the connection uses
+the address of the other port to activate the connection.</p>
+            <p>In some personal computer systems the port is called an adapter. The adapter is
+specified locally using an adapter number in conjunction with the adapter DLC
+name. The DLC name and adapter number are used to form the portId. The portId
+is used when activating or deactivating a port.</p>
+            <p><b>RODM Class Name</b></p>
+            <p>1.3.18.0.0.2085</p>
+            <p><b>MyName Field</b></p>
+            <p>Object name of lenNode object in the following form:</p>
+            <ul>
+                <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2032=snaNodeName;”<br>
+“1.3.18.0.0.2133=linkName”</li>
+                 <li>Example:<br>
+“1.3.18.0.2.4.6=APPNNET;”<br>
+“1.3.18.0.0.2032=NT81I056;”<br>
+“1.3.18.0.0.2133=PAMUT4”</li>
+            </ul>
+            <p>If the logicalLink object can be multiply owned (more than one agent can
+report on the same object), then the second relative distinguished name (RDN)
+is not used when naming this object in RODM. In this case, the name must be
+an agent-independent name. The removal of the second RDN accomplishes this
+requirement. For more information, refer to the IBM Tivoli NetView for z/OS
+SNA Topology Manager Implementation Guide.</p>
+            <p>The logicalLink's that can be multiply owned are:</p>
+            <ul>
+            <li>logicalLink objects that are part of the NCP definitionGroup at a VTAM
+node.</li>
+            <li>logicalLink objects that are part of the SWITCHED definitionGroup at a
+VTAM node<br>
+                The name will have the following form:</li>
+                <li>Specification:<br>
+“1.3.18.0.2.4.6=snaNetID;”<br>
+“1.3.18.0.0.2133=linkName”</li>
+                <li>Example:<br>
+“1.3.18.0.2.4.6=SNANET;”<br>
+“1.3.18.0.0.2133=PU4”</li>
+            </ul>
+            <p><b>Using Object Class Fields</b></p>
+            <p>The following table contains the specific topology fields, the private management
+fields, and the specific presentation (graphical view) fields used by objects of the
+port object class. It includes the valid field value, the default value, the
+initialization rules, and the modification rules for each field.</p>
+            <p><i>Table 62. Fields for port Object Class</i></p>
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Valid Values</th>
+                    <th>Mod</th>
+                    <th>O/R</th>
+                    <th>Default</th>
+                </tr>
+            <tr>
+                <td>adapterAddresses</td>
+                <td>T</td>
+                <td>Adapter address associated with port</td>
+                <td>Init  Null</td>
+                <td>Opt</td>
+                <td>Null</td>
+                </tr>
+                <tr>
+                <td>adapterNumbers</td>
+                    <td>T</td>
+                    <td>Adapter number associated with port</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>AggregationParent</td>
+                    <td>P</td>
+                    <td>Zero or more
+subareaTransmissionGroupCircuit objects</td>
+                    <td>Add  </td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>AggregationPriorityValue</td>
+                    <td>P</td>
+                    <td><b>0–9 </b>Priority value (zero through
+nine)<br>
+<b>-1</b> Suspended<br>
+<b>-2 </b>Use a value from the DRT object.</td>
+                </tr>
+                <tr>
+                    <td>aIndMACAddress</td>
+                    <td>T</td>
+                    <td>12-byte MAC Address of LAN adapter.</td>
+                    <td>Yes </td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>CommandIndicator</td>
+                    <td>A</td>
+                    <td>Either: <ul> <li>32768</li>
+<li> 32769</li></ul></td>
+                    <td>Yes</td>
+                    <td>Yes  </td>
+                    <td>Opt</td>
+                    <td>32769</td>
+                </tr>
+                <tr>
+                <td>connectionId</td>
+                    <td>T</td>
+                    <td>Adapter number associated with port</td>
+                    <td>Init </td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                </tr>
+                <tr>
+                    <td>Correlater  
+</td>
+                    <td>A</td>
+                    <td>Value used for free-form correlation, for example: LondonEngland.</td>
+                    <td>Yes</td>
+                    <td>Opt </td>
+                    <td> Null</td>
+                </tr>
+                <tr>
+                <td>deleteIndicator</td>
+                     <td> A</td>
+                     <td>Enumerated value for delete processing</td>
+                     <td>Yes</td>
+                     <td>Opt</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceName </td>
+                    <td> P</td>
+                    <td>Display the name of the port object.
+Specification:<br>
+snaNetID.snaNodeName.portId or<br>
+snaNetID.portId for multiply owned<br>
+resource Examples:<br>
+'APPNNET.NT81I056.IBMTRNET.0' or<br>
+'SNANET.LINE1.' Note that the<br>
+DisplayResourceName will be different if<br>
+sample FLBTRDMG is loaded. See<br>
+“DisplayResourceName” on page 379 <br>for more information.</td>
+                    <td>Init</td>
+                    <td>Opt</td>
+                    <td> Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceOtherData</td>
+                    <td>P</td>
+                    <td>Any combination of the following
+separated by a comma:<br>
+                        <ul>
+                        <li>“DLC Name=dlcName”</li>
+                            <li>“Adapter Numbers=(adapterNumbers)”</li>
+                            <li>“Connection ID=(connectionId)”“Adapter Addresses=(adapterAddresses)”</li>
+                            <li>“Adapter Addresses=(adapterAddresses)”</li>
+                            <li>“Line Type=Switched/Non-Switched”</li>
+                            <li>“Last Physical Logical
+Link=snaNetID.linkName”</li>
+                            <li>“Reporting SSCPs=(names of SSCPs)”
+(for multiply owned resources)</li>
+                            <li>“Def Group Type=major node type”</li>
+                        </ul>
+                    </td>
+                    <td>Init </td>
+                    <td>Opt </td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>DisplayResourceType</td>
+                    <td>P</td>
+                    <td>DUIXC_RTN_PORT</td>
+                    <td>Yes</td>
+                    <td> Opt</td>
+                    <td> Null</td>
+                </tr>
+                <tr>
+                <td>DisplayStatus</td>
+                    <td>P </td>
+                    <td>See “DisplayStatus” on page 385</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td> —</td>
+                </tr>
+                <tr>
+                    <td>dlcName</td>
+                <td> T</td>
+                    <td>Name of data link control for port </td>
+                    <td>Init</td>
+                    <td>Opt </td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                <td>ExceptionViewList</td>
+                    <td>P </td>
+                    <td>Names of exception views </td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>Null</td>
+                </tr>
+                <tr>
+                    <td>FLB_Creator
+                    </td>
+                    <td>A</td>
+                    <td>Any printable named string</td>
+                    <td>Yes</td>
+                    <td>Opt</td>
+                    <td>FLB</td>
+                </tr>
+                <tr>
+                <td>supportedConnectionNames </td>
+                    <td>T</td>
+                    <td>Zero or more objects of the following<br>
+classes:<br>
+logicalLink<br>
+*ntriTypeAppnTgCircuit<br>
+subareaTransmissionGroupCircuit</td>
+                    <td>No </td>
+                    <td>— </td>
+                    <td>Null</td>
+                </tr>
+            </table>
+            
+        </div>
+    </body>
+</html>
